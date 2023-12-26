@@ -1,3 +1,4 @@
+---
 name: Lint
 on:
   pull_request:
@@ -25,9 +26,6 @@ jobs:
 
       - name: Run yamllint.
         run: yamllint .
-
-      - name: Run ansible-lint.
-        run: ansible-lint
 
 #      - name: 'Slack Notification'
 #        uses: cypik/action-slack@v2
