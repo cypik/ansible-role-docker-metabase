@@ -1,13 +1,13 @@
 <p align="center"> <img src="https://user-images.githubusercontent.com/50652676/62451340-ba925480-b78b-11e9-99f0-13a8a9cc0afa.png" width="100" height="100"></p>
 
-
-# Ansible Role: Metabase
-
+<h1 align="center">
+    Ansible Role Docker-Metabase
+</h1>
 An Ansible role to install and configure Metabase on a target system.
 
 ## Table of Contents
-- [Role Variables](#Role Variables)
-- [Example Playbook](#Example Playbook)
+- [Role Variables](#Role-Variables)
+- [Example Playbook](#Example-Playbook)
 - [License](#license)
 
 ## Role Variables
@@ -21,18 +21,13 @@ An Ansible role to install and configure Metabase on a target system.
 - `metabase_log_dir`    : Specify the log_dir for Metabase.
 - `metabase_server_bind`: Specify the server_bind for Metabase.
 - `metabase_server_port`: Specify the server_port for Metabase.
-- [Add any other configurable variables]
-
-## Dependencies
-
-- [List any dependencies or other roles required by this role]
 
 ## Example Playbook
 
 ```yaml
 - hosts: servers
   roles:
-    - { role: username.ansible-role-metabase, metabase_version: "X.X.X" }
+    - { role: username.ansible-role-metabase, metabase_version: "v0.48.0" }
 
 ```
 ## License
