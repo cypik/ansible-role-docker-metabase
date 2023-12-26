@@ -6,8 +6,8 @@
 An Ansible role to install and configure Metabase on a target system.
 
 ## Table of Contents
-- [Role Variables](#Role Variables)
-- [Example Playbook](#Example Playbook)
+- [Role Variables](#Role-Variables)
+- [Example Playbook](#Example-Playbook)
 - [License](#license)
 
 ## Role Variables
