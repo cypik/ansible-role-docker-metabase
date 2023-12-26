@@ -1,0 +1,14 @@
+---
+
+- name: create metabase dirs
+  file:
+     path: "{{ item|safe|trim }}"
+     state: directory
+     owner: "{{ metabase_user }}"
+     group: "{{ metabase_group }}"
+     mode: 0777
+     recurse: yes
+  changed_when: "False"
+  with_items:
+     - "{{ metabase_opt_dir }}"
+     - "{{ metabase_data_dir }}"

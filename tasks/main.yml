@@ -1,0 +1,6 @@
+---
+# tasks file for ansible-role-metabase
+
+- import_tasks: users.yml
+- import_tasks: configure.yml
+- import_tasks: install.yml

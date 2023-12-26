@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+
+chmod -R 777 /var/log/
+mkdir -p /var/run/metabase/
+mkdir -p /run/metabase/
+
+set -eux -o pipefail
+
+# pull the image before so we dont first remove the container and then pull
+
+docker rm -f -v metabase || :
+
+docker run -u root  --rm --name=metabase \
+	-v {{ metabase_log_dir }}:/var/log/metabase:rw \
+	-v {{ metabase_data_dir }}:/metabase-data:rw \
+	-p 3000:3000 \
+    -e "MB_DB_FILE=/metabase-data/metabase.db" \
+           metabase/metabase:"{{ metabase_version }}"

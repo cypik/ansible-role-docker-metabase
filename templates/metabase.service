@@ -1,0 +1,10 @@
+[Unit]
+Description=Server
+
+[Service]
+TimeoutStartSec=0
+Restart=always
+ExecStart=/usr/local/bin/metabase
+
+[Install]
+WantedBy=multi-user.target

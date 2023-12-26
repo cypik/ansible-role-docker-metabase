@@ -1,0 +1,12 @@
+---
+
+- name: setup group
+  group:
+     name: "{{ metabase_group }}"
+     system: yes
+
+- name: setup user
+  user:
+     name: "{{ metabase_user }}"
+     system: yes
+     group: "{{ metabase_group }}"

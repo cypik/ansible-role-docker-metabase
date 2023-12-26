@@ -1,0 +1,8 @@
+---
+# handlers file for ansible-role-docker-metabase
+
+- name: restart metabase
+  service:
+    name: metabase
+    state: restarted
+    enabled: ture

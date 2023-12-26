@@ -1,0 +1,32 @@
+---
+
+- name: copy metabase script
+  template:
+    src: "metabase"
+    dest: /usr/local/bin/metabase
+    mode: 0755
+    owner: root
+    group: root
+
+- name: copy metabase script
+  template:
+    src: "metabase.service"
+    dest: /etc/systemd/system/metabase.service
+    mode: 0644
+    owner: root
+    group: root
+
+- name: ensure metabase service is restarted
+  service:
+    name: metabase
+    state: restarted
+    enabled: true
+
+- name: wait for metabase to become ready
+  wait_for:
+    host: "{{ metabase_server_bind }}"
+    port: "{{ metabase_server_port }}"
+    state: started
+    delay: 5
+    connect_timeout: 15
+    timeout: 300

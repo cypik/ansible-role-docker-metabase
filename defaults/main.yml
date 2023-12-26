@@ -1,0 +1,14 @@
+---
+# defaults file for ansible-role-docker-metabase
+
+metabase_version: v0.48.0
+
+metabase_user: metabase
+metabase_group: metabase
+
+metabase_opt_dir: "/opt/metabase"
+metabase_data_dir: metabase-data
+metabase_log_dir: /var/log/metabase
+
+metabase_server_bind: 0.0.0.0
+metabase_server_port: 3000
