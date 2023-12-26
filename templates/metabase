@@ -7,7 +7,7 @@ mkdir -p /run/metabase/
 set -eux -o pipefail
 
 # pull the image before so we dont first remove the container and then pull
-# -v {{ metabase_log_dir }}:/var/log/metabase:rw \
+
 docker rm -f -v metabase || :
 
 docker run -u root  --rm --name=metabase \
