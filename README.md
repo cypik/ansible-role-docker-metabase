@@ -21,11 +21,6 @@ An Ansible role to install and configure Metabase on a target system.
 - `metabase_log_dir`    : Specify the log_dir for Metabase.
 - `metabase_server_bind`: Specify the server_bind for Metabase.
 - `metabase_server_port`: Specify the server_port for Metabase.
-- [Add any other configurable variables]
-
-## Dependencies
-
-- [List any dependencies or other roles required by this role]
 
 ## Example Playbook
 
