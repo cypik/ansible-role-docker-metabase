@@ -1,8 +1,6 @@
-.DS_Store
-*/**.DS_Store
-._*
-.*.sw*
-*~
-.idea/
-.vscode/
-*.retry
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+.terraform
+.idea
+*.iml

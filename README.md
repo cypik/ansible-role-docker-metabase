@@ -1,6 +1,5 @@
 <p align="center"> <img src="https://user-images.githubusercontent.com/50652676/62451340-ba925480-b78b-11e9-99f0-13a8a9cc0afa.png" width="100" height="100"></p>
 
-
 # Ansible Role: Metabase
 
 An Ansible role to install and configure Metabase on a target system.
@@ -32,7 +31,7 @@ An Ansible role to install and configure Metabase on a target system.
 ```yaml
 - hosts: servers
   roles:
-    - { role: username.ansible-role-metabase, metabase_version: "X.X.X" }
+    - { role: username.ansible-role-metabase, metabase_version: "v0.48.0" }
 
 ```
 ## License
